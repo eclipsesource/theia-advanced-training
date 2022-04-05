@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "keywords": [
+    "theia-extension"
+  ],
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@theia/core": "latest"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "mocha --config config/mocharc.json \"./src/**/*.spec.?(ts|tsx)\""
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/backend-frontend-module",
+      "backend": "lib/node/backend-backend-module"
+    }
+  ]
+}
