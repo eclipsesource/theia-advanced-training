@@ -14,6 +14,6 @@
     "ts-node": "^10.7.0"
   },
   "workspaces": [
-    "backend", "browser-app", "electron-app"
+    "backend","widget", "browser-app", "electron-app"
   ]
 }
